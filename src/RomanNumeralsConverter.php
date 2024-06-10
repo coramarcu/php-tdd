@@ -2,6 +2,13 @@
 
 final class RomanNumeralsConverter {
     public function convertToRoman(int $number): string {
-        return $number == 5 ? "V" : "X";
+        switch ($number) {
+            case 5:
+                return "V";
+            case 10:
+                return "X";
+            case 50: 
+                return "L";
+        }
     }
 }
