@@ -20,4 +20,10 @@ final class RomanNumeralsConverterTest extends TestCase
         $result = $converter->convertToRoman(50);
         $this->assertSame('L', $result);
     }
+
+    public function testThat100ConvertsToC(): void {
+        $converter = new RomanNumeralsConverter();
+        $result = $converter->convertToRoman(100);
+        $this->assertSame('C', $result);
+    }
 }
