@@ -2,32 +2,40 @@
 
 final class RomanNumeralsConverter {
     public function convertToRoman(int $number): string {
-        switch ($number) {
-            case 1:
+        switch (true) {
+            case ($number == 1):
                 return "I";
-            case 4:
+            case ($number >= 1 && $number < 4): {
+                $roman_numeral = "";
+
+                for($i = $number; $i >= 1; $i--) {
+                    $roman_numeral .= "I";
+                }
+                return $roman_numeral;
+            }
+            case ($number == 4):
                 return "IV";
-            case 5:
+            case ($number == 5):
                 return "V";
-            case 9:
+            case ($number == 9):
                 return "IX";
-            case 10:
+            case ($number == 10):
                 return "X";
-            case 40:
+            case ($number == 40):
                 return "XL";
-            case 50: 
+            case ($number == 50): 
                 return "L";
-            case 90:
+            case ($number == 90):
                 return "XC";
-            case 100:
+            case ($number == 100):
                 return "C";
-            case 400:
+            case ($number == 400):
                 return "CD";
-            case 500:
+            case ($number == 500):
                 return "D";
-            case 900:
+            case ($number == 900):
                 return "CM";
-            case 1000:
+            case ($number == 1000):
                 return "M";
         }
     }
