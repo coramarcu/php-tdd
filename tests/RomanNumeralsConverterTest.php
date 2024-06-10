@@ -86,5 +86,10 @@ final class RomanNumeralsConverterTest extends TestCase
         $this->assertSame('III', $result);
     }
 
+    public function testThatItConverts49toXLIX(): void {
+        $converter = new RomanNumeralsConverter();
+        $result = $converter->convertToRoman(49);
+        $this->assertSame('XLIX', $result);
+    }
 
 }
