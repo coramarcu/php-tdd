@@ -13,6 +13,8 @@ final class RomanNumeralsConverter {
                 return "C";
             case 500:
                 return "D";
+            case 1000:
+                return "M";
         }
     }
 }
