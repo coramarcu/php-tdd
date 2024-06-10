@@ -38,4 +38,40 @@ final class RomanNumeralsConverterTest extends TestCase
         $result = $converter->convertToRoman(1000);
         $this->assertSame('M', $result);
     }
+
+    public function testThat4ConvertsToIV(): void {
+        $converter = new RomanNumeralsConverter();
+        $result = $converter->convertToRoman(4);
+        $this->assertSame('IV', $result);
+    }
+
+    public function testThat9ConvertsToIX(): void {
+        $converter = new RomanNumeralsConverter();
+        $result = $converter->convertToRoman(9);
+        $this->assertSame('IX', $result);
+    }
+
+    public function testThat40ConvertsToXL(): void {
+        $converter = new RomanNumeralsConverter();
+        $result = $converter->convertToRoman(40);
+        $this->assertSame('XL', $result);
+    }
+
+    public function testThat90ConvertsToXC(): void {
+        $converter = new RomanNumeralsConverter();
+        $result = $converter->convertToRoman(90);
+        $this->assertSame('XC', $result);
+    }
+
+    public function testThat400ConvertsToCD(): void {
+        $converter = new RomanNumeralsConverter();
+        $result = $converter->convertToRoman(400);
+        $this->assertSame('CD', $result);
+    }
+
+    public function testThat900ConvertsToCM(): void {
+        $converter = new RomanNumeralsConverter();
+        $result = $converter->convertToRoman(900);
+        $this->assertSame('CM', $result);
+    }
 }
