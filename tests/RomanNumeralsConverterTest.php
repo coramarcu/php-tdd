@@ -8,4 +8,10 @@ final class RomanNumeralsConverterTest extends TestCase
         $result = $converter->convertToRoman(5);
         $this->assertSame('V', $result);
     }
+
+    public function testRuleForTen(): void {
+        $converter = new RomanNumeralsConverter();
+        $result = $converter->convertToRoman(10);
+        $this->assertSame('X', $result);
+    }
 }
