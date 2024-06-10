@@ -3,6 +3,8 @@
 final class RomanNumeralsConverter {
     public function convertToRoman(int $number): string {
         switch ($number) {
+            case 1:
+                return "I";
             case 4:
                 return "IV";
             case 5:
