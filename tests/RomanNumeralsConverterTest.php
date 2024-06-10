@@ -3,6 +3,11 @@ use PHPUnit\Framework\TestCase;
 
 final class RomanNumeralsConverterTest extends TestCase
 {
+    public function testThat1convertsToI(): void {
+        $converter = new RomanNumeralsConverter();
+        $result = $converter->convertToRoman(1);
+        $this->assertSame('I', $result);
+    }
     public function testThat5ConvertsToV(): void {
         $converter = new RomanNumeralsConverter();
         $result = $converter->convertToRoman(5);
@@ -74,4 +79,5 @@ final class RomanNumeralsConverterTest extends TestCase
         $result = $converter->convertToRoman(900);
         $this->assertSame('CM', $result);
     }
+
 }
