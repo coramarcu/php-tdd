@@ -32,4 +32,10 @@ final class RomanNumeralsConverterTest extends TestCase
         $result = $converter->convertToRoman(500);
         $this->assertSame('D', $result);
     }
+
+    public function testThat1000ConvertsToM(): void {
+        $converter = new RomanNumeralsConverter();
+        $result = $converter->convertToRoman(1000);
+        $this->assertSame('M', $result);
+    }
 }
