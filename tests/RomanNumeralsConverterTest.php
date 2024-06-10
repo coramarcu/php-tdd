@@ -92,4 +92,10 @@ final class RomanNumeralsConverterTest extends TestCase
         $this->assertSame('XLIX', $result);
     }
 
+    public function testThatItConverts1999toMCMXCIX(): void {
+        $converter = new RomanNumeralsConverter();
+        $result = $converter->convertToRoman(1999);
+        $this->assertSame('MCMXCIX', $result);
+    }
+
 }
