@@ -80,4 +80,11 @@ final class RomanNumeralsConverterTest extends TestCase
         $this->assertSame('CM', $result);
     }
 
+    public function testThatItWorksWithNumbersBetween1and4(): void {
+        $converter = new RomanNumeralsConverter();
+        $result = $converter->convertToRoman(3);
+        $this->assertSame('III', $result);
+    }
+
+
 }
